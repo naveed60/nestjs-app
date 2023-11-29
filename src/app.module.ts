@@ -9,6 +9,7 @@ import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigService } from '@nestjs/config';
 import { BookModule } from './book/book.module';
+import { EmployeeModule } from './employee/employee.module';
 @Module({
   imports: [ ConfigModule.forRoot({
     isGlobal: true,
@@ -22,7 +23,7 @@ import { BookModule } from './book/book.module';
     }),
   })
     
-    ,UsersModule, TasksModule, PostsModule, AdminModule, BookModule],
+    ,UsersModule, TasksModule, PostsModule, AdminModule, BookModule, EmployeeModule],
   controllers: [AppController],
   providers: [AppService],
 })
