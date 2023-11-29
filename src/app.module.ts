@@ -10,6 +10,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigService } from '@nestjs/config';
 import { BookModule } from './book/book.module';
 import { EmployeeModule } from './employee/employee.module';
+import { EmailModule } from './email/email.module';
 @Module({
   imports: [ ConfigModule.forRoot({
     isGlobal: true,
@@ -23,7 +24,7 @@ import { EmployeeModule } from './employee/employee.module';
     }),
   })
     
-    ,UsersModule, TasksModule, PostsModule, AdminModule, BookModule, EmployeeModule],
+    ,UsersModule, TasksModule, PostsModule, AdminModule, BookModule, EmployeeModule, EmailModule],
   controllers: [AppController],
   providers: [AppService],
 })
