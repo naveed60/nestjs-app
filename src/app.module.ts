@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import {MongooseModule} from '@nestjs/mongoose';
 import { BookModule } from './book/book.module';
+import { FoodModule } from './food/food.module';
 
 @Module({
   imports: [MongooseModule.forRoot('mongodb://localhost/nest'),
@@ -12,6 +13,8 @@ import { BookModule } from './book/book.module';
   }),
     
     BookModule,
+    
+    FoodModule,
    
   ],
   controllers: [],
